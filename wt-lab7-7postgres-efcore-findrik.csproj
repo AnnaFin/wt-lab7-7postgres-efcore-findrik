@@ -4,7 +4,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>wt_lab6_6minimalapi_findrik</RootNamespace>
+    <RootNamespace>wt-lab7-7postgres-efcore-findrik</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
