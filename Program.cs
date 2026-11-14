@@ -12,7 +12,9 @@ if (!string.IsNullOrWhiteSpace(databaseUrl))
 {
     var uri = new Uri(databaseUrl);
     var userInfo = uri.UserInfo.Split(':', 2);
-    connectionString = $"Host={uri.Host};Port={uri.Port};Database={uri.AbsolutePath.TrimStart('/')};Username={userInfo[0]};Password={userInfo[1]};SSL Mode=Require;Trust Server Certificate=true";
+    int dbPort = uri.Port == -1 ? 5432 : uri.Port;
+
+    connectionString = $"Host={uri.Host};Port={dbPort};Database={uri.AbsolutePath.TrimStart('/')};Username={userInfo[0]};Password={userInfo[1]};SSL Mode=Disable";
 }
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));
@@ -50,7 +52,7 @@ app.MapGet("/api/tasks", async (string? search, AppDbContext db) =>
     return Results.Ok(tasks);
 });
 
-/// 1. Фильтрация (Задачи с оценкой больше 20 часов)
+// 1. Фильтрация (Задачи с оценкой больше 20 часов)
 app.MapGet("/api/tasks/long", async (AppDbContext db) =>
 {
     var tasks = await db.Tasks.Where(x => x.EstimatedHours > 20).ToListAsync();
@@ -119,5 +121,6 @@ app.MapDelete("/api/tasks/{id}", async (int id, AppDbContext db) =>
     return Results.NoContent();
 });
 
+// Настройка порта для Render
 var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
 app.Run($"http://0.0.0.0:{port}");
