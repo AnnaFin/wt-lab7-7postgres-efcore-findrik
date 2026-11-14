@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Учёба\\Вэб-технологии\\Лаб 6\\wt-lab6-6minimalapi-findrik\\wt-lab6-6minimalapi-findrik.csproj": {}
+    "D:\\Учёба\\Вэб-технологии\\Лаб 7\\wt-lab7-7postgres-efcore-findrik\\wt-lab6-6minimalapi-findrik.csproj": {}
   },
   "projects": {
-    "D:\\Учёба\\Вэб-технологии\\Лаб 6\\wt-lab6-6minimalapi-findrik\\wt-lab6-6minimalapi-findrik.csproj": {
+    "D:\\Учёба\\Вэб-технологии\\Лаб 7\\wt-lab7-7postgres-efcore-findrik\\wt-lab6-6minimalapi-findrik.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Учёба\\Вэб-технологии\\Лаб 6\\wt-lab6-6minimalapi-findrik\\wt-lab6-6minimalapi-findrik.csproj",
+        "projectUniqueName": "D:\\Учёба\\Вэб-технологии\\Лаб 7\\wt-lab7-7postgres-efcore-findrik\\wt-lab6-6minimalapi-findrik.csproj",
         "projectName": "wt-lab6-6minimalapi-findrik",
-        "projectPath": "D:\\Учёба\\Вэб-технологии\\Лаб 6\\wt-lab6-6minimalapi-findrik\\wt-lab6-6minimalapi-findrik.csproj",
+        "projectPath": "D:\\Учёба\\Вэб-технологии\\Лаб 7\\wt-lab7-7postgres-efcore-findrik\\wt-lab6-6minimalapi-findrik.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Учёба\\Вэб-технологии\\Лаб 6\\wt-lab6-6minimalapi-findrik\\obj\\",
+        "outputPath": "D:\\Учёба\\Вэб-технологии\\Лаб 7\\wt-lab7-7postgres-efcore-findrik\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,16 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[10.3.1, )"

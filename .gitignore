@@ -1,0 +1,17 @@
+.vs/
+.vscode/
+.idea/
+
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Ll]og/
+[Ll]ogs/
+
+appsettings.Development.json
+
+*.user
+*.suo
+*.tmp
+*.log
+.DS_Store

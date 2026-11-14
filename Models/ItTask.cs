@@ -1,4 +1,4 @@
-namespace wt_lab6_6minimalapi_findrik.Models;
+namespace wt_lab7_7postgres_efcore_findrik.Models;
 
 public class ItTask
 {
@@ -8,4 +8,5 @@ public class ItTask
     public string Priority { get; set; } = "Medium";
     public double EstimatedHours { get; set; }
     public bool IsCompleted { get; set; }
+    public DateTime CreatedAt { get; set; } 
 }
